@@ -89,7 +89,7 @@ ExternalProject_Add(
         eval "${ntl_make_libpath_tweak_cmd}" &&
         # Using $(MAKE) set this build as sub-task, so all make
         # arguments (including -j) are forwarded
-        # $(MAKE)
+        make
     INSTALL_COMMAND cd src && make install
     TEST_AFTER_INSTALL OFF
     TEST_EXCLUDE_FROM_MAIN ON

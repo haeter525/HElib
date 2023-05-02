@@ -89,8 +89,8 @@ ExternalProject_Add(
         eval "${ntl_make_libpath_tweak_cmd}" &&
         # Using $(MAKE) set this build as sub-task, so all make
         # arguments (including -j) are forwarded
-        $(MAKE)
-    INSTALL_COMMAND cd src && $(MAKE) install
+        # $(MAKE)
+    INSTALL_COMMAND cd src && make install
     TEST_AFTER_INSTALL OFF
     TEST_EXCLUDE_FROM_MAIN ON
     # Turn LOG_BUILD ON will log the build step to a file in the stamp directory
